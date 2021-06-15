@@ -4,7 +4,7 @@ namespace UserRegistrationUsingRegex
 {
     class Program
     {   /// <summary>
-    /// UC1-First Name validation
+    /// UC2-Last Name validation
     /// </summary>
     /// <param name="args"></param>
         static void Main(string[] args)
@@ -15,7 +15,10 @@ namespace UserRegistrationUsingRegex
             Console.WriteLine("Enter First name :");
             string fname = Console.ReadLine();
             RegexValidation regex = new RegexValidation();
-            regex.CheckFirstName(fname);
+            regex.CheckName(fname);
+            Console.WriteLine("Enter Last name :");
+            string lname = Console.ReadLine();
+            regex.CheckName(lname);
         }
     }
 }

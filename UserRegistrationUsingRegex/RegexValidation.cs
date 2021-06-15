@@ -7,13 +7,13 @@ namespace UserRegistrationUsingRegex
 {
     class RegexValidation
     {
-        public void CheckFirstName(string firstname)
+        public void CheckName(string name)
         {
             string validateFirstName = "^[A-Z][a-z]{3,20}$";
             try
             {
-                if(Regex.IsMatch(firstname, validateFirstName))
-                    Console.WriteLine("First Name saved succesfull");
+                if(Regex.IsMatch(name, validateFirstName))
+                    Console.WriteLine(" Name saved succesfull");
                 else
                     Console.WriteLine("Invalid name!!");
             }
