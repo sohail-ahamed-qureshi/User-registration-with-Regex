@@ -55,7 +55,7 @@ namespace UserRegistrationUsingRegex
 
         internal void CheckPassword(string password)
         {
-            string validatepassword = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+            string validatepassword = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[&%$#@^*!~]).{8,}$";
             try
             {
                 if (Regex.IsMatch(password, validatepassword))
