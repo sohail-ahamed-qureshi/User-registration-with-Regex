@@ -7,7 +7,7 @@ namespace UserRegistrationUsingRegex
 {
     class RegexValidation
     {
-        public void CheckName(string name)
+        internal void CheckName(string name)
         {
             string validateFirstName = "^[A-Z][a-z]{3,20}$";
             try
@@ -22,7 +22,7 @@ namespace UserRegistrationUsingRegex
                 Console.WriteLine(e.Message);
             }
         }
-        public void CheckEmail(string email)
+        internal void CheckEmail(string email)
         {
             string validateEmail = "^[a-z][a-zA-Z0-9._-]{3,20}@[a-z]{3,10}.(com)$";
             try
@@ -37,7 +37,7 @@ namespace UserRegistrationUsingRegex
                 Console.WriteLine(e.Message);
             }
         }
-        public void CheckMobileNo(string mobile)
+        internal void CheckMobileNo(string mobile)
         {
             string validateMobile = "^[0-9]{1,4}\\s[0-9]{10,12}$";
             try
@@ -46,6 +46,22 @@ namespace UserRegistrationUsingRegex
                     Console.WriteLine(" mobile no validate succesfull");
                 else
                     Console.WriteLine("Invalid mobile no.!!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        internal void CheckPassword(string password)
+        {
+            string validatepassword = "^[A-Za-z0-9]{8,20}$";
+            try
+            {
+                if (Regex.IsMatch(password, validatepassword))
+                    Console.WriteLine("password validate succesfull");
+                else
+                    Console.WriteLine("Invalid password!!");
             }
             catch (Exception e)
             {

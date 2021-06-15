@@ -4,7 +4,7 @@ namespace UserRegistrationUsingRegex
 {
     class Program
     {   /// <summary>
-    /// UC4-Mobile Number validation
+    /// UC5- Rule 1- Password validation
     /// </summary>
     /// <param name="args"></param>
         static void Main(string[] args)
@@ -25,6 +25,9 @@ namespace UserRegistrationUsingRegex
             Console.WriteLine("Enter Mobile no. :");
             string mobile = Console.ReadLine();
             regex.CheckMobileNo(mobile);
+            Console.WriteLine("Enter Password :");
+            string password = Console.ReadLine();
+            regex.CheckPassword(password);
         }
     }
 }
