@@ -37,5 +37,20 @@ namespace UserRegistrationUsingRegex
                 Console.WriteLine(e.Message);
             }
         }
+        public void CheckMobileNo(string mobile)
+        {
+            string validateMobile = "^[0-9]{1,4}\\s[0-9]{10,12}$";
+            try
+            {
+                if (Regex.IsMatch(mobile, validateMobile))
+                    Console.WriteLine(" mobile no validate succesfull");
+                else
+                    Console.WriteLine("Invalid mobile no.!!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 }
