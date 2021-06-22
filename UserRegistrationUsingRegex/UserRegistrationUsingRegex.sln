@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistrationUsingRegex", "UserRegistrationUsingRegex.csproj", "{865149D5-4049-4613-A720-80B6C14DBCA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserRegistrationUsingRegex", "UserRegistrationUsingRegex.csproj", "{865149D5-4049-4613-A720-80B6C14DBCA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitUserValidation", "..\NUnitUserValidation\NUnitUserValidation.csproj", "{49ABD7B8-1CE7-4EFE-B2E4-C49C49010D39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{865149D5-4049-4613-A720-80B6C14DBCA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{865149D5-4049-4613-A720-80B6C14DBCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{865149D5-4049-4613-A720-80B6C14DBCA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49ABD7B8-1CE7-4EFE-B2E4-C49C49010D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49ABD7B8-1CE7-4EFE-B2E4-C49C49010D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49ABD7B8-1CE7-4EFE-B2E4-C49C49010D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49ABD7B8-1CE7-4EFE-B2E4-C49C49010D39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
