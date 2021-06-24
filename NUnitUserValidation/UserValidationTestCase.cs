@@ -45,5 +45,18 @@ namespace NUnitUserValidation
             else
                 Assert.Fail("Entry Failed");
         }
+
+        [Test]
+        [TestCase("sohailquershi@gmail.com")]
+        [TestCase("abc.100@yahoo.com")]
+        [TestCase("abc-100@abc.net")]
+        [TestCase("abc.100@abc.com.au")]
+        [TestCase("abc+100@gmail.com")]
+        public void GivenMultipleEmailsEntries_ReturnsResult(string email)
+        {
+            RegexValidation regex = new RegexValidation();
+            bool result = regex.CheckEmail(email);
+            Assert.IsTrue(result);
+        }
     }
 }
