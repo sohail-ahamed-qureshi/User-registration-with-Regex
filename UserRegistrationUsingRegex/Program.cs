@@ -15,19 +15,19 @@ namespace UserRegistrationUsingRegex
             Console.WriteLine("*length should be Minimum three characters.");
             Console.WriteLine("Enter First name :");
             string fname = Console.ReadLine();
-            regex.CheckName(fname);
+            regex.LambdaNameValidation(fname);
             Console.WriteLine("Enter Last name :");
             string lname = Console.ReadLine();
-            regex.CheckName(lname);
+            regex.LambdaNameValidation(lname);
             Console.WriteLine("Enter Email id :");
             string email = Console.ReadLine();
-            regex.CheckEmail(email);
+            regex.LambdaEmailValidation(email);
             Console.WriteLine("Enter Mobile no. :");
             string mobile = Console.ReadLine();
-            regex.CheckMobileNo(mobile);
+            regex.LambdaMobileNumberValidation(mobile);
             Console.WriteLine("Enter Password :");
             string password = Console.ReadLine();
-            regex.CheckPassword(password);
+            regex.LambdaPasswordValidation(password);   
         }
     }
 }

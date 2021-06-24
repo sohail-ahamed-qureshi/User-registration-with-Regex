@@ -97,5 +97,9 @@ namespace UserRegistrationUsingRegex
             }
             return false;
         }
+        public bool LambdaNameValidation(string name) => Regex.IsMatch(name, validateFirstName) ? true : throw new RegexValidationExceptions(RegexValidationExceptions.InvalidUserDetails.INVALID_NAME);
+        public bool LambdaEmailValidation(string email) => Regex.IsMatch(email, validateEmail) ? true : throw new RegexValidationExceptions(RegexValidationExceptions.InvalidUserDetails.INVALID_EMAIL);
+        public bool LambdaMobileNumberValidation(string mobile) => Regex.IsMatch(mobile, validateMobile) ? true : throw new RegexValidationExceptions(RegexValidationExceptions.InvalidUserDetails.INVALID_MOBILE_NUMBER);
+        public bool LambdaPasswordValidation(string password) => Regex.IsMatch(password, validatepassword) ? true : throw new RegexValidationExceptions(RegexValidationExceptions.InvalidUserDetails.INVALID_PASSWORD);
     }
 }
