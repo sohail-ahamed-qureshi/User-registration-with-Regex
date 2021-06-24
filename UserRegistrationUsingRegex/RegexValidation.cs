@@ -15,11 +15,13 @@ namespace UserRegistrationUsingRegex
                 if (Regex.IsMatch(name, validateFirstName))
                     //Console.WriteLine(" Name validate succesfull");
                     return true;
-
                 else
                     //Console.WriteLine("Invalid name!!");
-                    return true;
-
+                    throw new RegexValidationExceptions(RegexValidationExceptions.InvalidUserDetails.INVALID_NAME);
+            }
+            catch(RegexValidationExceptions ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             catch(Exception e)
             {
@@ -37,7 +39,11 @@ namespace UserRegistrationUsingRegex
                     return true;
                 else
                     // Console.WriteLine("Invalid email!!");
-                    return false;
+                    throw new RegexValidationExceptions(RegexValidationExceptions.InvalidUserDetails.INVALID_EMAIL);
+            }
+            catch (RegexValidationExceptions ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             catch (Exception e)
             {
@@ -55,7 +61,11 @@ namespace UserRegistrationUsingRegex
                     return true;
                 else
                     //Console.WriteLine("Invalid mobile no.!!");
-                    return false;
+                    throw new RegexValidationExceptions(RegexValidationExceptions.InvalidUserDetails.INVALID_MOBILE_NUMBER);
+            }
+            catch (RegexValidationExceptions ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             catch (Exception e)
             {
@@ -74,7 +84,11 @@ namespace UserRegistrationUsingRegex
                     return true;
                 else
                     //Console.WriteLine("Invalid password!!");
-                    return false;
+                    throw new RegexValidationExceptions(RegexValidationExceptions.InvalidUserDetails.INVALID_PASSWORD);
+            }
+            catch (RegexValidationExceptions ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             catch (Exception e)
             {

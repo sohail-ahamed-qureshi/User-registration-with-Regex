@@ -1,30 +1,46 @@
 using NUnit.Framework;
+using System;
 using UserRegistrationUsingRegex;
 
 namespace NUnitUserValidation
 {
     public class Tests
     {
-        bool firstName;
-        bool lastName;
-        bool mobile;
-        bool email;
-        bool password;
+        bool firstName, sadFirstName;
+        bool lastName, sadLastName;
+        bool mobile, sadMobile;
+        bool email, sadEmail;
+        bool password, sadPassword;
         [SetUp]
-        public void Setup()
+        public void SetupForHappy_ReturnsEntrySuccessfully()
         {
-           RegexValidation regex = new RegexValidation();
+            //Happy test case entry successfull
+            RegexValidation regex = new RegexValidation();
             firstName = regex.CheckName("Sohail");
             lastName = regex.CheckName("Ahamed");
             mobile = regex.CheckMobileNo("91 9663552136");
             email = regex.CheckEmail("sohailqureshi82@gmail.com");
-            password = regex.CheckPassword("S@k215600");
-        }
+            password = regex.CheckPassword("S@k12345678");
 
+            //Sad Test case entry fails
+            sadFirstName = regex.CheckName("sohail");
+            sadLastName = regex.CheckName("Aha");
+            sadMobile = regex.CheckMobileNo("919663552136");
+            sadEmail = regex.CheckEmail("sohailqureshi82gmail.com");
+            sadPassword = regex.CheckPassword("Sk12345678");
+        }
         [Test]
-        public void GivenUserDetails_ReturnsValidationResult()
-        {    
+        public void GivenUserValidations_ReturnsEntrySuccessfully()
+        {
             if (firstName && lastName && mobile && email && password)
+                Assert.Pass("Entry SuccessFull");
+            else
+                Assert.Fail("Entry Failed");
+        }
+        [Test]
+        public void GivenUserValidations_ReturnsEntryFails()
+        {
+            if (sadFirstName && sadLastName && sadMobile && sadEmail && sadPassword)
                 Assert.Pass("Entry SuccessFull");
             else
                 Assert.Fail("Entry Failed");
