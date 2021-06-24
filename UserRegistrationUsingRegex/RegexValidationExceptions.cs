@@ -14,6 +14,10 @@ namespace UserRegistrationUsingRegex
         /// </summary>
         public enum InvalidUserDetails
         {
+            EMPTY_NAME,
+            EMPTY_EMAIL,
+            EMPTY_MOBILE_NUMBER,
+            EMPTY_PASSWORD,
             INVALID_NAME,
             INVALID_EMAIL,
             INVALID_MOBILE_NUMBER,
@@ -25,6 +29,14 @@ namespace UserRegistrationUsingRegex
         /// <param name="error">Defines the type of Exception</param>
         public RegexValidationExceptions(InvalidUserDetails error)
         {
+            if (error == InvalidUserDetails.EMPTY_NAME)
+                Console.WriteLine(error + ": Name cannot be empty or null");
+            if (error == InvalidUserDetails.EMPTY_EMAIL)
+                Console.WriteLine(error + ": Email cannot be empty or null");
+            if (error == InvalidUserDetails.EMPTY_MOBILE_NUMBER)
+                Console.WriteLine(error + ": Mobile Number cannot be empty or null");
+            if (error == InvalidUserDetails.EMPTY_PASSWORD)
+                Console.WriteLine(error + ": Password cannot be empty or null");
             if (error == InvalidUserDetails.INVALID_EMAIL)
                 Console.WriteLine(error + ": Email Validation Error!!");
             if (error == InvalidUserDetails.INVALID_MOBILE_NUMBER)
